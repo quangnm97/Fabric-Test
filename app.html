@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    body {
+      background: black;
+      color: #CCCCCC;
+    }
+
+    #c2 {
+      background-image: url(media/foo.png);
+      background-repeat: no-repeat;
+    }
+
+    div {
+      float: left;
+      border: 1px solid #444444;
+      margin: 10px;
+      background: #3B3B3B;
+    }
+
+    button {
+      padding: 10px;
+      margin: 10px;
+    }
+  </style>
+    <script type="text/javascript" src="fabric.js"></script>
+</head>
+
+<body>
+  <video height="360" width="640" id="video" style="display: none">
+    <source src=getSrc()>
+  </video>
+  <div>
+    <canvas id="c" width="640" height="360"></canvas>
+  </div>
+  <button onclick="play()">play</button>
+  <button onclick="pause()">pause</button>
+  <div>
+    <canvas id="timeline" width="840" height="100">
+    </canvas>
+  </div>
+  <script>
+    var lstSrc = ['http://192.168.26.47:8088/videoplayback.mp4', 'http://192.168.26.47:8088/videoplayback2.mp4', 'http://192.168.26.47:8088/videoplayback3.mp4' ];
+    document.getElementById("video").src = lstSrc[Math.floor(Math.random() * lstSrc.length)];
+    </script>
+    <script type="text/javascript" src="process2.js"></script>
+</body>
+</html>

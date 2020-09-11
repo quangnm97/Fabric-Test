@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .text-tool {
+            box-sizing: border-box;
+            width: 380px;
+            padding: 0px 10px;
+        }
+        
+        .control-text,
+        .input-area {
+            box-sizing: border-box;
+            height: 62px;
+            background: rgb(245, 245, 245) none repeat scroll 0% 0% / auto padding-box border-box;
+            border-radius: 9px;
+            margin: 10px 0px 0px;
+            padding: 10px;
+        }
+        
+        .inner-control {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .control-font-family {
+            height: 42px;
+            width: 120px;
+        }
+        
+        .control-font-size {
+            height: 42px;
+            min-width: auto;
+            width: 76px;
+        }
+        
+        .control-font-align,
+        .control-font-more {
+            width: 40px;
+            border: 0px none rgb(33, 37, 41);
+            font: 16px / 24px -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            align-items: center;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .front-dropdown {
+            width: 100%;
+            height: 100%;
+            border-radius: 9px;
+            border: none;
+            padding: 8px;
+            font-size: 13px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background: white;
+            background-repeat: no-repeat;
+            background-position-x: 95%;
+            background-position-y: 9px;
+            background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z' fill='none'/></svg>");
+        }
+        
+        .control-font-weight {
+            cursor: pointer;
+            font: 17px / 24px -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+        }
+        
+        .input-area input {
+            height: 34px;
+            width: 340px;
+            background: rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box;
+            border: 0px none rgb(33, 37, 41);
+            font: 16px / 24px -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            padding: 5px;
+        }
+        
+        .text-add-button {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .text-add-button button {
+            margin-top: 25px;
+            color: rgb(255, 255, 255);
+            width: 170px;
+            background: rgb(47, 117, 255) none repeat scroll 0% 0% / auto padding-box border-box;
+            border: 1px solid rgb(47, 117, 255);
+            border-radius: 9999px;
+            font: 16px / 24px -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            outline: rgb(255, 255, 255) none 0px;
+            padding: 12px 17px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="text-tool">
+        <div class="control-text">
+            <div class="inner-control">
+                <div class="control-font-family">
+                    <select name="frontFamilyDropdown" class="front-dropdown">
+                        <option value="Arial">Arial</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                    </select>
+                </div>
+                <div class="control-font-size">
+                    <select name="frontFamilyDropdown" class="front-dropdown" id="">
+                        <option value="16">16px</option>
+                        <option value="32">32px</option>
+                        <option value="22">22px</option>
+                        <option value="48">48px</option>
+                        <option value="64">64px</option>
+                    </select>
+                </div>
+                <div class="control-font-align">
+                    <img style="width: 16px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAAk1BMVEX///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAArFS3cAAAAMXRSTlMACV+AO+7/reB/EYjrBBACCAYO5f64Rnv0D99nsjpD9sFvkIxAbj/zsN4NwExoNXwweZYnYgAAAM1JREFUeAHt24WNAwEMBdEfcpiZObt73H9114NlyZE0rwvDSLV6I029JjVblqjVVNtStdWxVB11LVVXvf7A0gz6PUnDUZqh3gIAAAAAAMB4EmEqp1ljbhEWy5Vc1hZls5XHzsLs5XGwMEd5nM4W5CKf3vUW4f6QEwAAAAAAALbPW5rnVnoVlqh4qbRUpSpLVWltqdaOZXWgeWMmaTxJM1Y+AAAAAACAsOTzQz5x0evnl1y6FuXck0fHwnzLo21hfuQRF78f5BOU///+yeUfrXtnEvemBCMAAAAASUVORK5CYII="
+                        alt="left">
+                </div>
+                <div class="control-font-weight">
+                    <span>A</span>
+                </div>
+                <div class="control-font-more">
+                    <img style="width: 20px; height: 20px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAxUlEQVRo3u3WMQ7CIBjF8b+6m3iWDvVmLibi6JGMk4PXMTo54iAkSqgR2iLG90sYyvDxHiwFERERERGRP7QG2gHmtG5WUVvAAldg2WNOA5zdrF2p8MYd6FduiefwfpnUIdOMg2/B9xzYJ5ZogAOwCPZtRp4sK15vLuUlYjdvgU2p8H1KVBM+p0R14VNKVBv+kxLVh/dMJOTFrXDffDtsl9hLVH/zKSWqD/+uxM+Ej5UYLfxsxAInYAIcefz8iYiIiIiIDOoO0N1wsoS3ur8AAAAldEVYdGRhdGU6Y3JlYXRlADIwMjAtMDgtMzFUMDQ6MjA6MDQrMDA6MDCUVUYmAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIwLTA4LTMxVDA0OjIwOjA0KzAwOjAw5Qj+mgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAASUVORK5CYII="
+                        alt="left">
+                </div>
+            </div>
+        </div>
+        <div class="input-area">
+            <input type="text" placeholder="Enter Text Here..." id="INPUT_135">
+        </div>
+        <div class="text-add-button">
+            <div><button> Add Text </button></div>
+        </div>
+    </div>
+</body>
+
+</html>

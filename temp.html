@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .filter {
+            block-size: 535px;
+            border-block-end-color: rgb(33, 37, 41);
+            border-block-start-color: rgb(33, 37, 41);
+            border-inline-end-color: rgb(33, 37, 41);
+            border-inline-start-color: rgb(33, 37, 41);
+            box-sizing: border-box;
+            caret-color: rgb(33, 37, 41);
+            color: rgb(33, 37, 41);
+            column-rule-color: rgb(33, 37, 41);
+            height: 535px;
+            inline-size: 352px;
+            max-inline-size: 1140px;
+            max-width: 1140px;
+            padding-inline-end: 15px;
+            padding-inline-start: 15px;
+            perspective-origin: 176px 267.5px;
+            text-align: left;
+            text-decoration: none solid rgb(33, 37, 41);
+            text-size-adjust: 100%;
+            transform-origin: 176px 267.5px;
+            width: 352px;
+            border: 0px none rgb(33, 37, 41);
+            font: 16px / 24px -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            outline: rgb(33, 37, 41) none 0px;
+            padding: 0px 15px;
+        }
+
+        .filter-col {
+            align-content: start;
+            align-items: center;
+            block-size: 480px;
+            border-block-end-color: rgb(33, 37, 41);
+            border-block-start-color: rgb(33, 37, 41);
+            border-inline-end-color: rgb(33, 37, 41);
+            border-inline-start-color: rgb(33, 37, 41);
+            box-sizing: border-box;
+            caret-color: rgb(33, 37, 41);
+            color: rgb(33, 37, 41);
+            column-gap: 10px;
+            column-rule-color: rgb(33, 37, 41);
+            display: grid;
+            grid-template-columns: 90px 90px 90px;
+            grid-template-rows: 110px 110px 110px 110px;
+            height: 480px;
+            inline-size: 322px;
+            justify-content: space-between;
+            margin-block-start: 10px;
+            padding-block-end: 20px;
+            padding-block-start: 20px;
+            perspective-origin: 161px 240px;
+            text-align: left;
+            text-decoration: none solid rgb(33, 37, 41);
+            text-size-adjust: 100%;
+            transform-origin: 161px 240px;
+            width: 322px;
+            border: 0px none rgb(33, 37, 41);
+            flex-flow: row wrap;
+            font: 16px / 24px -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            margin: 10px 0px 0px;
+            outline: rgb(33, 37, 41) none 0px;
+            padding: 20px 0px;
+        }
+
+        .filter-item {
+            align-items: center;
+            block-size: 100px;
+            box-sizing: border-box;
+            cursor: pointer;
+            display: flex;
+            height: 100px;
+            inline-size: 80px;
+            justify-content: center;
+            margin-block-end: 5px;
+            margin-block-start: 5px;
+            margin-inline-end: 5px;
+            margin-inline-start: 5px;
+            min-block-size: auto;
+            min-height: auto;
+            min-inline-size: auto;
+            min-width: auto;
+            perspective-origin: 40px 50px;
+            text-align: left;
+            text-size-adjust: 100%;
+            transform-origin: 40px 50px;
+            width: 80px;
+            border-radius: 7px;
+            flex-flow: column nowrap;
+            font: 600 11px / 16.5px -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            margin: 5px;
+            transition: -webkit-transform 0.2s ease 0s;
+        }
+
+        .filter-item-inner {
+            align-items: center;
+            block-size: 80px;
+            bottom: 0px;
+            box-sizing: border-box;
+            cursor: pointer;
+            display: flex;
+            height: 80px;
+            inline-size: 80px;
+            justify-content: center;
+            left: 0px;
+            margin-block-end: 5px;
+            margin-block-start: 5px;
+            margin-inline-end: 5px;
+            margin-inline-start: 5px;
+            min-block-size: auto;
+            min-height: auto;
+            min-inline-size: auto;
+            min-width: auto;
+            perspective-origin: 40px 40px;
+            position: relative;
+            right: 0px;
+            text-align: left;
+            text-size-adjust: 100%;
+            top: 0px;
+            transform-origin: 40px 40px;
+            width: 80px;
+            border-radius: 7px;
+            flex-flow: column nowrap;
+            font: 600 11px / 16.5px -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            margin: 5px;
+            transition: -webkit-transform 0.2s ease 0s;
+        }
+
+        .filter-item-inner img {
+            block-size: 80px;
+            border-block-end-color: rgb(255, 255, 255);
+            border-block-end-style: solid;
+            border-block-end-width: 5px;
+            border-block-start-color: rgb(255, 255, 255);
+            border-block-start-style: solid;
+            border-block-start-width: 5px;
+            border-inline-end-color: rgb(255, 255, 255);
+            border-inline-end-style: solid;
+            border-inline-end-width: 5px;
+            border-inline-start-color: rgb(255, 255, 255);
+            border-inline-start-style: solid;
+            border-inline-start-width: 5px;
+            bottom: 0px;
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 15px 0px;
+            box-sizing: border-box;
+            cursor: pointer;
+            display: block;
+            height: 80px;
+            inline-size: 80px;
+            left: 0px;
+            min-block-size: auto;
+            min-height: auto;
+            min-inline-size: auto;
+            min-width: auto;
+            perspective-origin: 40px 40px;
+            position: relative;
+            right: 0px;
+            text-align: left;
+            text-size-adjust: 100%;
+            top: 0px;
+            transform-origin: 40px 40px;
+            user-select: none;
+            vertical-align: middle;
+            width: 80px;
+            border: 5px solid rgb(255, 255, 255);
+            border-radius: 5px;
+            font: 600 11px / 16.5px -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="filter">
+
+
+        <div class="filter-col">
+            <div class="filter-item">
+                <div class="filter-item-inner">
+                    <img src="./model.jpg">
+                </div>None
+            </div>
+            <div class="filter-item">
+                <div class="filter-item-inner">
+                    <img src="./model.jpg">
+                </div>None
+            </div>
+            <div class="filter-item">
+                <div class="filter-item-inner">
+                    <img src="./model.jpg">
+                </div>None
+            </div>
+            <div class="filter-item">
+                <div class="filter-item-inner">
+                    <img src="./model.jpg">
+                </div>None
+            </div>
+            <div class="filter-item">
+                <div class="filter-item-inner">
+                    <img src="./model.jpg">
+                </div>None
+            </div>
+            <div class="filter-item">
+                <div class="filter-item-inner">
+                    <img src="./model.jpg">
+                </div>None
+            </div>
+            <div class="filter-item">
+                <div class="filter-item-inner">
+                    <img src="./model.jpg">
+                </div>None
+            </div>
+            <div class="filter-item">
+                <div class="filter-item-inner">
+                    <img src="./model.jpg">
+                </div>None
+            </div>
+            <div class="filter-item">
+                <div class="filter-item-inner">
+                    <img src="./model.jpg">
+                </div>None
+            </div>
+            <div class="filter-item">
+                <div class="filter-item-inner">
+                    <img src="./model.jpg">
+                </div>None
+            </div>
+            <div class="filter-item">
+                <div class="filter-item-inner">
+                    <img src="./model.jpg">
+                </div>None
+            </div>
+            <div class="filter-item">
+                <div class="filter-item-inner">
+                    <img src="./model.jpg">
+                </div>None
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    body {
+      background: black;
+      color: #CCCCCC;
+    }
+
+    #c2 {
+      background-image: url(media/foo.png);
+      background-repeat: no-repeat;
+    }
+
+    div {
+      float: left;
+      border: 1px solid #444444;
+      padding: 10px;
+      margin: 10px;
+      background: #3B3B3B;
+    }
+
+    button {
+      padding: 10px;
+      margin: 10px;
+    }
+
+    video {
+      display: none;
+      width: 640px;
+      height: 360px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main">
+    <!-- <video src="http://127.0.0.1:8088/videoplayback.mp4" id="video1El" width="640" height="360" alt=""></video> -->
+    <canvas id="canvas" width="640" height="360">
+    </canvas>
+  </div>
+  <script type="text/javascript" src="fabric.js"></script>
+  <script>
+
+    var canvas = new fabric.StaticCanvas('canvas');
+    var videoEl = document.createElement('video');
+    canvas.setDimensions({
+        width: 500,
+        height: 500
+    });
+    videoEl.src = 'http://127.0.0.1:8088/videoplayback.mp4';
+    videoEl.height = 360
+    videoEl.width = 640
+    videoEl.crossOrigin = "anonymous";
+    document.getElementById('main').appendChild(videoEl);
+    video1El.play();
+    var video1El = document.getElementById('video1El');
+    canvas.add(new fabric.Image(videoEl, {
+      scaleX: 0.1,
+      scaleY: 0.1,
+    }));
+    canvas.add(new fabric.Rect({
+      width: 300,
+      height: 300,
+      fill: 'blue'
+    }))
+    // const render = () => {
+    //   canvas.renderAll();
+    // }
+    // fabric.util.requestAnimFrame(render);
+    // for (let index = 0; index < 20; index++) {
+    //   // video1El.currentTime = index
+    //   canvas.renderAll();
+    // }
+    // setTimeout(() => {
+    //   // canvas.add(new fabric.Image(video1El))
+    //   canvas.add(new fabric.Rect({ width: 20, height: 20 }))
+    // }, 3000)
+  </script>
+</body>
+
+</html>

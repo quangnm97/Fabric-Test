@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="c" width="640" height="360"></canvas>
+    <script src="./fabric.js"></script>
+
+    <script>
+        var canvas = new fabric.Canvas('c');
+        var rect = new fabric.Rect({ width: 300, height: 300 });
+        canvas.add(rect);
+        rect.animate({ left: 500 }, {
+                duration: 3000,
+                onChange: () => {
+                    canvas.renderAll();
+                },
+                abort: () => {
+                    return rect.ahihi;
+                }
+            });
+        rect.on('mousedown', () => {
+            rect.ahihi = true
+        })
+        rect.on('mouseup', () => {
+            rect.ahihi = false
+            rect.animate({ left: 500 }, {
+                duration: 3000,
+                onChange: () => {
+                    canvas.renderAll();
+                },
+                abort: () => {
+                    return rect.ahihi;
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

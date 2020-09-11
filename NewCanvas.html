@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #DIV_12 {
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            overflow-x: auto;
+            overflow-y: hidden;
+            margin: 0px;
+            height: 20px;
+        }
+
+        #canvas {
+            width: 1597px;
+        }
+
+        #time-stick {
+            width: 1633px;
+            position: absolute;
+            top: 0px;
+            left: 12px;
+            z-index: 2;
+            pointer-events: none;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="DIV_12">
+        <canvas id="canvas"  width = "1597">
+        </canvas>
+        <canvas id="time-stick">
+        </canvas>
+    </div>
+    <script type="text/javascript" src="fabric.js"></script>
+    <script>
+        var canvas = new fabric.Canvas('canvas')
+        canvas.on('mouse:down', e => {
+            console.log(e)
+        })
+        canvas.backgroundColor = '#000';
+    </script>
+</body>
+
+</html>

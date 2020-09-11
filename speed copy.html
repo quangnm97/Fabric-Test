@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .speed {
+            block-size: 418.469px;
+            box-sizing: border-box;
+            width: 380px;
+            padding: 0px 15px;
+        }
+
+        .speed span {
+            font: 800 14px / 21px -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+        }
+
+        .speed .btn-speed {
+            display: flex;
+            margin: 15px 0px;
+        }
+
+        .speed .btn-speed button {
+            appearance: none;
+            cursor: pointer;
+            width: 77.5px;
+            background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box;
+            border: 1px solid rgb(99, 109, 116);
+            border-radius: 5px;
+            font: 16px / 24px -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            margin: 5px;
+            padding: 10px 15px;
+            transition: color 0.15s ease-in-out 0s, background-color 0.15s ease-in-out 0s, border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s, transform 0.15s ease-in-out 0s;
+        }
+
+        .speed .rage-speed {
+            padding: 0 5px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .speed .input-rage {
+            padding: 5px;
+        }
+
+        .speed .input-rage input {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="speed">
+        <span>Video Speed</span>
+        <div class="btn-speed">
+            <button>
+                0.5x
+            </button>
+            <button>
+                1x
+            </button>
+            <button>
+                1.5x
+            </button>
+            <button>
+                2x
+            </button>
+        </div>
+        <div class="rage-speed">
+            <span>Video Speed</span>
+            <span style="text-align: right;">2</span>
+        </div>
+        <div class="input-rage">
+            <input type="range" id="volume" name="volume" min="0" max="200">
+        </div>
+    </div>
+</body>
+
+</html>

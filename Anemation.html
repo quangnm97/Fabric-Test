@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <canvas id="c" width="640" height="360"></canvas>
+    </div>
+    <script src="./fabric.js"></script>
+
+    <script>
+        canvas = new fabric.Canvas('c');
+
+        // effect 1
+
+        const text = new fabric.Textbox('QUANG hihi', { fill: '#fff', fontFamily: 'arial', width: 200, top: -10, textAlign: 'center', fontSize: 25, fontWeight: 'bold', opacity: 0 })
+        const rect = new fabric.Rect({ width: text.width, height: 0, fill: '#009be6', selectable: false })
+        const rect2 = new fabric.Rect({ width: text.width - 2, height: 0, fill: '#fff', stroke: 0, left: 1, selectable: false });
+        text.on('moving', () => {
+            rect.left = text.left;
+            rect.top = text.top;
+            rect2.top = text.top;
+            rect2.left = text.left;
+        })
+        canvas.add(rect2);
+        canvas.add(rect);
+        canvas.add(text);
+        rect.animate({ height: text.height }, {
+            duration: 700,
+            onChange: () => {
+                canvas.renderAll();
+                text.animate({ opacity: 1, top: 0 }, {
+                    duration: 500,
+                    onChange: () => {
+                        canvas.renderAll();
+                    },
+                })
+            },
+        });
+        rect2.animate({ height: text.height }, {
+            duration: 500,
+            onChange: () => {
+                canvas.renderAll();
+            }
+        })
+
+        // effect 2
+
+        const rect3 = new fabric.Rect({ width: 0, height: 50, fill: '#009be6', top: 500 })
+        const rect4 = new fabric.Rect({ width: 0, height: 50, fill: '#fff', stroke: 0, top: 500 });
+        canvas.add(rect4);
+        canvas.add(rect3);
+        const text2 = new fabric.Textbox('QUANG hihi', { fill: '#fff', fontFamily: 'arial', width: 200, left: -20, top: 505, textAlign: 'center', fontSize: 25, fontWeight: 'bold', opacity: 0 })
+        canvas.add(text2);
+        rect3.animate({ width: 200 }, {
+            duration: 700,
+            onChange: () => {
+                canvas.renderAll();
+                text2.animate({ opacity: 1, left: 0 }, {
+                    duration: 500,
+                    onChange: () => {
+                        canvas.renderAll();
+                    },
+                })
+            },
+        });
+        rect4.animate({ width: 200 }, {
+            duration: 500,
+            onChange: () => {
+                canvas.renderAll();
+            }
+        })
+
+    </script>
+</body>
+
+</html>

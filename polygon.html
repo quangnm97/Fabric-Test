@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="main">
+        <!-- <video src="http://127.0.0.1:8088/videoplayback.mp4" id="video1El" width="640" height="360" alt=""></video> -->
+        <canvas id="canvas" width="640" height="360">
+        </canvas>
+    </div>
+    <script type="text/javascript" src="fabric.js"></script>
+    <script>
+         
+        // Initiate a Canvas instance 
+        var canvas = new fabric.Canvas("canvas"); 
+  
+        // Initiate a polygon instance 
+        var polygon = new fabric.Polygon([ 
+        { x: 0, y: 0 }, 
+        { x: 22, y: 0 },
+        { x: 10, y: 10},
+        { x: 10, y: 100},
+        { x: 12, y: 100},
+        { x: 12, y: 10}], { 
+            fill: 'green' 
+        }); 
+        polygon.left = 0
+        // Render the polygon in canvas 
+        canvas.add(polygon); 
+    </script>
+</body>
+
+</html>

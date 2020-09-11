@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .upload {
+            align-items: center;
+            block-size: 271.641px;
+            border-block-end-color: rgb(33, 37, 41);
+            border-block-start-color: rgb(33, 37, 41);
+            border-inline-end-color: rgb(33, 37, 41);
+            border-inline-start-color: rgb(33, 37, 41);
+            box-sizing: border-box;
+            caret-color: rgb(33, 37, 41);
+            color: rgb(33, 37, 41);
+            column-rule-color: rgb(33, 37, 41);
+            display: flex;
+            height: 271.641px;
+            inline-size: 293.469px;
+            padding-block-end: 16px;
+            padding-block-start: 16px;
+            padding-inline-end: 32px;
+            padding-inline-start: 32px;
+            perspective-origin: 146.734px 135.812px;
+            text-align: left;
+            text-decoration: none solid rgb(33, 37, 41);
+            text-size-adjust: 100%;
+            transform-origin: 146.734px 135.82px;
+            width: 293.469px;
+            border: 0px none rgb(33, 37, 41);
+            flex-flow: column nowrap;
+            font: 16px / 24px -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            outline: rgb(33, 37, 41) none 0px;
+            padding: 16px 32px;
+        }
+
+        .upload-img {
+            block-size: 100.641px;
+            border-block-end-color: rgb(33, 37, 41);
+            border-block-start-color: rgb(33, 37, 41);
+            border-inline-end-color: rgb(33, 37, 41);
+            border-inline-start-color: rgb(33, 37, 41);
+            box-sizing: border-box;
+            caret-color: rgb(33, 37, 41);
+            color: rgb(33, 37, 41);
+            column-rule-color: rgb(33, 37, 41);
+            display: block;
+            height: 100.641px;
+            inline-size: 80px;
+            margin-inline-end: 74.7344px;
+            margin-inline-start: 74.7344px;
+            max-inline-size: 100%;
+            max-width: 100%;
+            min-block-size: auto;
+            min-height: auto;
+            min-inline-size: auto;
+            min-width: auto;
+            padding-block-end: 20px;
+            perspective-origin: 40px 50.3125px;
+            text-align: left;
+            text-decoration: none solid rgb(33, 37, 41);
+            text-size-adjust: 100%;
+            transform-origin: 40px 50.3203px;
+            user-select: none;
+            vertical-align: middle;
+            width: 80px;
+            z-index: 90;
+            border: 0px none rgb(33, 37, 41);
+            font: 16px / 24px -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            margin: 0px 74.7344px;
+            outline: rgb(33, 37, 41) none 0px;
+            padding: 0px 0px 20px;
+        }
+
+        .upload-title {
+            block-size: 27px;
+            border-block-end-color: rgb(33, 37, 41);
+            border-block-start-color: rgb(33, 37, 41);
+            border-inline-end-color: rgb(33, 37, 41);
+            border-inline-start-color: rgb(33, 37, 41);
+            box-sizing: border-box;
+            caret-color: rgb(33, 37, 41);
+            color: rgb(33, 37, 41);
+            column-rule-color: rgb(33, 37, 41);
+            display: block;
+            height: 27px;
+            inline-size: 229.469px;
+            min-block-size: auto;
+            min-height: auto;
+            min-inline-size: auto;
+            min-width: auto;
+            perspective-origin: 114.734px 13.5px;
+            text-align: center;
+            text-decoration: none solid rgb(33, 37, 41);
+            text-size-adjust: 100%;
+            transform-origin: 114.734px 13.5px;
+            width: 229.469px;
+            border: 0px none rgb(33, 37, 41);
+            font: 800 18px / 27px -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            outline: rgb(33, 37, 41) none 0px;
+        }
+
+        .upload-content {
+            block-size: 32px;
+            border-block-end-color: rgb(33, 37, 41);
+            border-block-start-color: rgb(33, 37, 41);
+            border-inline-end-color: rgb(33, 37, 41);
+            border-inline-start-color: rgb(33, 37, 41);
+            box-sizing: border-box;
+            caret-color: rgb(33, 37, 41);
+            color: rgb(33, 37, 41);
+            column-rule-color: rgb(33, 37, 41);
+            display: block;
+            height: 32px;
+            inline-size: 228.516px;
+            min-block-size: auto;
+            min-height: auto;
+            min-inline-size: auto;
+            min-width: auto;
+            padding-block-start: 16px;
+            perspective-origin: 114.25px 16px;
+            text-align: center;
+            text-decoration: none solid rgb(33, 37, 41);
+            text-size-adjust: 100%;
+            transform-origin: 114.258px 16px;
+            width: 228.516px;
+            border: 0px none rgb(33, 37, 41);
+            font: 12px / 16px -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            outline: rgb(33, 37, 41) none 0px;
+            padding: 16px 0px 0px;
+        }
+
+        .upload-button {
+            block-size: 70px;
+            border-block-end-color: rgb(33, 37, 41);
+            border-block-start-color: rgb(33, 37, 41);
+            border-inline-end-color: rgb(33, 37, 41);
+            border-inline-start-color: rgb(33, 37, 41);
+            box-sizing: border-box;
+            caret-color: rgb(33, 37, 41);
+            color: rgb(33, 37, 41);
+            column-rule-color: rgb(33, 37, 41);
+            height: 30px;
+            inline-size: 227.859px;
+            min-block-size: auto;
+            min-height: auto;
+            min-inline-size: auto;
+            min-width: auto;
+            perspective-origin: 113.922px 35px;
+            text-align: left;
+            text-decoration: none solid rgb(33, 37, 41);
+            text-size-adjust: 100%;
+            transform-origin: 113.93px 35px;
+            width: 227.859px;
+            border: 0px none rgb(33, 37, 41);
+            font: 16px / 24px -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            outline: rgb(33, 37, 41) none 0px;
+            border: 0px none rgb(255, 255, 255);
+            border-radius: 7px;
+            width: 227.859px;
+            background: rgb(255, 0, 106) none repeat scroll 0% 0% / auto padding-box border-box;
+            box-sizing: border-box;
+            caret-color: rgb(255, 255, 255);
+            color: rgb(255, 255, 255);
+            margin-top: 30px;
+        }
+
+        .upload-button .upload-button-inner {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .upload input {
+            align-items: baseline;
+            appearance: none;
+            border-block-end-color: rgb(33, 37, 41);
+            border-block-end-style: none;
+            border-block-end-width: 0px;
+            border-block-start-color: rgb(33, 37, 41);
+            border-block-start-style: none;
+            border-block-start-width: 0px;
+            border-inline-end-color: rgb(33, 37, 41);
+            border-inline-end-style: none;
+            border-inline-end-width: 0px;
+            border-inline-start-color: rgb(33, 37, 41);
+            border-inline-start-style: none;
+            border-inline-start-width: 0px;
+            caret-color: rgb(33, 37, 41);
+            color: rgb(33, 37, 41);
+            column-rule-color: rgb(33, 37, 41);
+            cursor: default;
+            display: none;
+            padding-block-end: 0px;
+            padding-block-start: 0px;
+            padding-inline-end: 0px;
+            padding-inline-start: 0px;
+            text-decoration: none solid rgb(33, 37, 41);
+            text-size-adjust: 100%;
+            background: rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box;
+            border: 0px none rgb(33, 37, 41);
+            font: 16px / 24px -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            outline: rgb(33, 37, 41) none 0px;
+            padding: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="upload">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHsAAAB8CAYAAABJws/HAAAACXBIWXMAABYlAAAWJQFJUiTwAAAF8WlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDggNzkuMTY0MDM2LCAyMDE5LzA4LzEzLTAxOjA2OjU3ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgMjEuMCAoV2luZG93cykiIHhtcDpDcmVhdGVEYXRlPSIyMDIwLTAxLTE1VDE1OjMyOjUzKzA3OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAyMC0wMS0xNVQxNTozNjowOSswNzowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAyMC0wMS0xNVQxNTozNjowOSswNzowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiIHBob3Rvc2hvcDpJQ0NQcm9maWxlPSJzUkdCIElFQzYxOTY2LTIuMSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpkYTMzODkyZC01MjJmLTVmNDYtYjk3MC03ZDg1OTE2YTkwMDYiIHhtcE1NOkRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDoxMmM1YTdkMC1jMTNkLWRlNDYtOGZkNy1hNDU2NmIyMDgwZWMiIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDozMzYwNmNlNi1iYzZjLTczNDAtYWY4Mi04YTRkNTU5ODg1ZGUiPiA8eG1wTU06SGlzdG9yeT4gPHJkZjpTZXE+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJjcmVhdGVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOjMzNjA2Y2U2LWJjNmMtNzM0MC1hZjgyLThhNGQ1NTk4ODVkZSIgc3RFdnQ6d2hlbj0iMjAyMC0wMS0xNVQxNTozMjo1MyswNzowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIDIxLjAgKFdpbmRvd3MpIi8+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJzYXZlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDpkYTMzODkyZC01MjJmLTVmNDYtYjk3MC03ZDg1OTE2YTkwMDYiIHN0RXZ0OndoZW49IjIwMjAtMDEtMTVUMTU6MzY6MDkrMDc6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCAyMS4wIChXaW5kb3dzKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7SbqYyAAADlUlEQVR42u3cO09TYRjA8X6Lfgu+BO1pSzEqJgoieIkmiJeJiYuAECyLOmrDzUQdoEwyySBqok6yWhc6MZHgIPNjX7QIhUPh9LSc93n/b/JnaUjJ+fG859KkMRGJ1Vtr0ounMm1eW/u5AQqvTLa9J5lKt4RhZAr0Swkv1XLEHyfUkA79AzQF27wRuNHBTyRT8dCxq7ZoDnjE4EPDBtkOcC+d8QJjtya8ONB2odcCrwXNQbQMPJ3JeqfCBlonOOdopeBH3Z/73VpxwBSA+2JzntaHXf0AhvO0cnAzxAewzZMYsHW2f7qZaofO3WA79LCFLdyhrZypdmgrBxts0vhEDWxHMhdpYDtSui3bAzbYBDaBTWAT2AQ2gU1gE9gENoENNoFNYBPYBDaBTWAT2ME6f7FDRkbH5P3qquTzebnS2QW2Vujc9LSUSiUxa2dnRwrLy06BO4FtoJ/k/kNXlgFfKrgDrh7bD9pFcNXYtaBdA1eLfVJol8BVYp8W2hVwddhBoQ+CF1SCq8KuQG9sbEg9Syu4GuywoDWDq8AOG7oa/LIScOuxDfRULhc69H7wxSUd4FZjNxq6sn4rAbcWu1nQmsCtxG42tBZw67C7urvlxcu8bG5uylksm8GtwjbQs3NzsrW1JWe5/oIvWQduDXZUoG0GtwI7atC2gkceu/NqNKFtBI80toGemZ2NLLRt4JHGHh0bb/rtVdC1vf1L5uYX5ELHJbCDNDg8LD+KRUuwt8vY82DX0/0HD3cn5vWbt8f2bmWlIbuAeTb+fX1dFgsF3/eeX3glk1NTcq33Ott4sxp/PFEGL4WK/eXrN+nrv8enXlFraOSRFIs/Q8X++Omz3Lp9B2ywwQYbbLDBBhtssMEGG2ywwQYbbLDBBhtssMEGG2ywwQYbbLDBBhtssMF2E7vvbr98WFvjmxdc+bak3hs3ZXxiUp4+e153g0PDfKcKgU1gE9gENoFNYBPYBDbYYINNYBPYBDaBTWAT2AQ2gU1gU7lkKt0CthsNtCa8ONiOYItILJbJtvdwMHRnjHexE8lUnOnWf3G2i21+gK17CzcDvYf9bysHXPEWvofNdOudanPLdQib6dY91QewmW7dU30I2yu/CLgO6MoVuC8227kO6Ort2xcbcJ3QvtiA64M+FhtwXdA1sasu2kC36GIsEPYRUw56hKbZfHR5UsMTY/ugA99k4CDIgbFrwFODMse68oFG0P4A3hj/D+Vv79AAAAAASUVORK5CYII="
+            alt="upload-arrow" class="upload-img" />
+        <span class="upload-title">Upload a New Video/Audio</span>
+        <span class="upload-content">Click the
+            button or drag and drop your file
+        </span>
+        <div class="upload-button">
+            <input
+                accept="audio/mp4,audio/*,video/mp4,video/quicktime,video/x-msvideo,video/webm,video/x-ms-wmv,video/x-matroska,video/avi,video/mpeg,video/*"
+                type="file" tabindex="-1" id="INPUT_8" />
+            <div class="upload-button-inner">
+                <span id="SPAN_10">Upload Video/Audio</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

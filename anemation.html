@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background: black;
+            color: #CCCCCC;
+        }
+
+        #c2 {
+            background-image: url(media/foo.png);
+            background-repeat: no-repeat;
+        }
+
+        div {
+            float: left;
+            border: 1px solid #444444;
+            margin: 10px;
+            background: #3B3B3B;
+        }
+
+        button {
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+    <script type="text/javascript" src="fabric.js"></script>
+</head>
+
+<body>
+
+    <div>
+        <canvas id="c" width="640" height="360"></canvas>
+    </div>
+    <script>
+        let lstArr = [0, 50, 100, 150];
+        // let lstName = ['blue', 'red', 'yellow', 'green'];
+        var canvas = new fabric.Canvas('c', {selection :false});
+        var rect1 = new fabric.Rect({ width: 200, height: 40, name: 'blue', top: 0, fill: '#009be6' })
+        var rect2 = new fabric.Rect({ width: 200, height: 40, name: 'red', top: 50, fill: '#ff3333' })
+        var rect3 = new fabric.Rect({ width: 200, height: 40, name: 'yellow', top: 100, fill: '#ffff1a' })
+        var rect4 = new fabric.Rect({ width: 200, height: 40, name: 'green', top: 150, fill: 'green' })
+        canvas.add(rect1);
+        canvas.add(rect2);
+        canvas.add(rect3);
+        canvas.add(rect4);
+        rect1.on('modified', (options) => {
+            // const lstArrMap = lstArr
+            // var b = lstName.filter(item => item !== options.target.name)
+            let top = options.transform.original.top;
+            lstArr.map((item, index) => {
+                if (Math.abs(options.target.top - item) < 25) {
+                    top = item;
+                }
+                return top;
+            });
+
+            var lstObj = canvas.getObjects();
+            var index = lstObj.findIndex((element) => element.top === top);
+            var item = lstObj.filter(e => e.top === top);
+            if (item.length) {
+                var temp = item.top;
+                item[0].top = options.transform.original.top;
+                item[0].setCoords();
+            }
+            options.target.top = top;
+            options.target.setCoords();
+
+        });
+        rect4.on('modified', (options) => {
+              // const lstArrMap = lstArr
+            // var b = lstName.filter(item => item !== options.target.name)
+            let top = options.transform.original.top;
+            lstArr.map((item, index) => {
+                if (Math.abs(options.target.top - item) < 25) {
+                    top = item;
+                }
+                return top;
+            });
+
+            var lstObj = canvas.getObjects();
+            var index = lstObj.findIndex((element) => element.top === top);
+            var item = lstObj.filter(e => e.top === top);
+            if (item.length) {
+                var temp = item.top;
+                item[0].top = options.transform.original.top;
+                item[0].setCoords();
+            }
+            options.target.top = top;
+            options.target.setCoords();
+
+        });
+        rect2.on('modified', (options) => {
+              // const lstArrMap = lstArr
+            // var b = lstName.filter(item => item !== options.target.name)
+            let top = options.transform.original.top;
+            lstArr.map((item, index) => {
+                if (Math.abs(options.target.top - item) < 25) {
+                    top = item;
+                }
+                return top;
+            });
+
+            var lstObj = canvas.getObjects();
+            var index = lstObj.findIndex((element) => element.top === top);
+            var item = lstObj.filter(e => e.top === top);
+            if (item.length) {
+                var temp = item.top;
+                item[0].top = options.transform.original.top;
+                item[0].setCoords();
+            }
+            options.target.top = top;
+            options.target.setCoords();
+
+        });
+        rect3.on('modified', (options) => {
+              // const lstArrMap = lstArr
+            // var b = lstName.filter(item => item !== options.target.name)
+            let top = options.transform.original.top;
+            lstArr.map((item, index) => {
+                if (Math.abs(options.target.top - item) < 25) {
+                    top = item;
+                }
+                return top;
+            });
+
+            var lstObj = canvas.getObjects();
+            var index = lstObj.findIndex((element) => element.top === top);
+            var item = lstObj.filter(e => e.top === top);
+            if (item.length) {
+                var temp = item.top;
+                item[0].top = options.transform.original.top;
+                item[0].setCoords();
+            }
+            options.target.top = top;
+            options.target.setCoords();
+
+        });
+    </script>
+</body>
+
+</html>

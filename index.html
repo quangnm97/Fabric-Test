@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    body {
+      background: black;
+      color: #CCCCCC;
+    }
+
+    #c2 {
+      background-image: url(media/foo.png);
+      background-repeat: no-repeat;
+    }
+
+    div {
+      float: left;
+      border: 1px solid #444444;
+      padding: 10px;
+      margin: 10px;
+      background: #3B3B3B;
+    }
+
+    button {
+      padding: 10px;
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <canvas id="canvas" width="640" height="360">
+    </canvas>
+  </div>
+  <script type="text/javascript" src="fabric.js"></script>
+  <script>
+    var canvas = new fabric.Canvas('canvas', {
+      preserveObjectStacking: true,
+      fireRightClick: true
+    });
+    const rect1 = new fabric.Rect({
+      width: 105,
+      height: 100,
+      left: 150,
+      top: 150,
+      fill: 'blue',
+      minScaleLimit: 1,
+    });
+    rect1.on('modified', options => {
+      // console.log('event:modified', options);
+      // console.log('event:modified', options);
+      console.log((options.target.scaleX - options.transform.scaleX) * options.target.width)
+    });
+    const rect = new fabric.Rect({
+      width: 100,
+      height: 100,
+      fill: 'red',
+    });
+    var Group = new fabric.Group([rect, rect1])
+    rect.on('added', options => {
+      console.log('event:added');
+      // console.log('event:added', options);
+    });
+    rect.on('removed', options => {
+      console.log('event:removed');
+      // console.log('event:removed', options);
+    });
+    rect.on('selected', options => {
+      console.log('event:selected');
+      // console.log('event:selected', options);
+    });
+    rect.on('deselected', options => {
+      console.log('event:deselected');
+      // console.log('event:deselected', options);
+    });
+    rect.on('modified', options => {
+      console.log('event:modified');
+      // console.log('event:modified', options);
+    });
+    rect.on('moved', options => {
+      console.log('event:moved');
+      // console.log('event:moved', options);
+    });
+    rect.on('scaled', options => {
+      console.log('event:scaled', options);
+    });
+    rect.on('scaling', function () {
+      if (this.scaleX > 1) {
+        this.scaleX = 1;
+      }
+    });
+    rect.on('rotated', options => {
+      console.log('event:rotated');
+      // console.log('event:rotated', options);
+    });
+    rect.on('skewed', options => {
+      console.log('event:skewed');
+      // console.log('event:skewed', options);
+    });
+    rect.on('rotating', options => {
+      console.log('event:rotating');
+      // console.log('event:rotating', options);
+    });
+    rect.on('scaling', options => {
+      console.log('event:scaling');
+      // console.log('event:scaling', options);
+    });
+    rect.on('moving', options => {
+      console.log('event:moving');
+      console.log(rect.intersectsWithObject(rect1))
+      // console.log('event:moving', options);
+    });
+    rect.on('skewing', options => {
+      console.log('event:skewing');
+      // console.log('event:skewing', options);
+    });
+    rect.on('mousedown', options => {
+      console.log('event:mousedown');
+      // console.log('event:mousedown', options);
+    });
+    rect.on('mouseup', options => {
+      console.log('event:mouseup');
+      // console.log('event:mouseup', options);
+    });
+    rect.on('mouseover', options => {
+      console.log('event:mouseover');
+      // console.log('event:mouseover', options);
+    });
+    rect.on('mouseout', options => {
+      console.log('event:mouseout');
+      // console.log('event:mouseout', options);
+    });
+    rect.on('mousewheel', options => {
+      console.log('event:mousewheel');
+      // console.log('event:mousewheel', options);
+    });
+    rect.on('mousedblclick', options => {
+      console.log('event:mousedblclick');
+      // console.log('event:mousedblclick', options);
+    });
+    rect.on('dragover', options => {
+      console.log('event:dragover');
+      // console.log('event:dragover', options);
+    });
+    rect.on('dragenter', options => {
+      console.log('event:dragenter');
+      // console.log('event:dragenter', options);
+    });
+    rect.on('dragleave', options => {
+      console.log('event:dragleave');
+      // console.log('event:dragleave', options);
+    });
+    rect.on('drop', options => {
+      console.log('event:drop');
+      // console.log('event:drop', options);
+    });
+    canvas.add(rect) //red
+    canvas.add(rect1) //red
+    // canvas.add(new fabric.Rect({
+    //   left: 150,
+    //   width: 100,
+    //   height: 100,
+    //   fill: "blue",
+    //   maxScaleLimit: 1,
+    // })); //blue
+    // rect.bringToFront();
+    // canvas.add(new fabric.Rect({
+    //   left: 300,
+    //   width: 100,
+    //   height: 100,
+    //   fill: "green"
+    // })); //blue
+    // canvas.add(alltogetherObj) //red
+    // rect.bringForward();
+    canvas.add(Group)
+    canvas.renderAll();
+    // canvas.on({
+    //   'object:scaling': onChange
+    // })
+    // function onChange(obj) {
+    //   var circle = obj.target.item(1),
+    //     group = obj.target,
+    //     scaleX = circle.width / group.getWidth(),
+    //     scaleY = circle.height / group.getHeight();
+    //   // circle.setScaleX(scaleX);
+    //   // circle.setScaleY(scaleY);
+    //   console.log(scaleX)
+    //   console.log(scaleY)
+
+    // }
+    // rect.bringToFront();
+  </script>
+  <script src="./script2.js"></script>
+</body>
+
+</html>

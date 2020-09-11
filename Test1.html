@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    body {
+      background: black;
+      color: #CCCCCC;
+    }
+
+    #c2 {
+      background-image: url(media/foo.png);
+      background-repeat: no-repeat;
+    }
+
+    div {
+      float: left;
+      border: 1px solid #444444;
+      padding: 10px;
+      margin: 10px;
+      background: #3B3B3B;
+    }
+
+    button {
+      padding: 10px;
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <canvas id="c" width="450" height="400"></canvas>
+    </canvas>
+  </div>
+  <button onclick="renderAll()">render</button>
+  <script src="./fabric.js"></script>
+  <script>
+
+    function renderAll() {
+      canvas.renderAll();
+    }
+
+    var canvas = new fabric.Canvas('c', { preserveObjectStacking: true });
+
+    canvas.add(new fabric.Rect({
+      width: 100,
+      height: 10,
+      top: 65,
+      fill: 'yellow'
+    }))
+
+    canvas.add(new fabric.Rect({
+      width: 150,
+      height: 10,
+      top: 75,
+      fill: 'yellow'
+    }))
+    canvas.add(new fabric.Rect({
+      width: 50,
+      height: 10,
+      top: 75,
+      fill: 'blue'
+    }))
+
+    canvas.add(new fabric.Rect({
+      width: 200,
+      height: 10,
+      top: 85,
+      fill: 'yellow'
+    }))
+
+    var Rect = new fabric.Rect({
+      width: 200,
+      height: 50,
+      fill: 'rgba(0,0,0,0.6)',
+      lockScalingY: true,
+      lockMovementY: true
+    });
+    var Rect2 = new fabric.Rect({
+      width: 200,
+      height: 50,
+      fill: 'white',
+      stroke: '#000',
+      strokeWidth: 1,
+      lockMovementY: true,
+      lockScalingY: true,
+      hasControls: false,
+    });
+
+    canvas.add(Rect2)
+    canvas.add(Rect)
+    Rect.on('scaled', options => {
+      // console.log('event:scaling', options);
+      if (options.transform.action === 'scaleX' && options.transform.corner === 'ml') {
+        if (!Rect.cacheLeft) {
+          Rect.cacheLeft = options.target.width * (options.transform.original.scaleX - options.transform.target.scaleX);
+        } else {
+          Rect.cacheLeft += options.target.width * (options.transform.original.scaleX - options.transform.target.scaleX);
+        }
+        // console.log('before, width', Rect.cacheLeft)
+        // console.log('before, left', Rect2.left)
+        // canvas.add(new fabric.Rect({
+        //   width: Rect.cacheLeft,
+        //   height: 50,
+        //   fill: 'blue',
+        //   left: Rect2.left,
+        //   hasControls: false,
+        // }))
+      }
+      if (options.transform.action === 'scaleX' && options.transform.corner === 'mr') {
+        var width = Rect.width - Rect.getScaledWidth() - (Rect.cacheLeft || 0);
+        var left = Rect.left + Rect.getScaledWidth()
+        console.log('width', width)
+        console.log('left', left)
+      //   var left = Rect.cacheLeft || 0;
+        // canvas.add(new fabric.Rect({
+        //   width,
+        //   height: 50,
+        //   fill: 'blue',
+        //   left,
+        //   hasControls: false,
+        // }))
+      }
+    });
+    Rect.on('moving', options => {
+      Rect2.left = options.target.left - (Rect.cacheLeft || 0);
+      Rect2.setCoords();
+    });
+    Rect2.on('moving', options => {
+      Rect.left = options.target.left + (Rect.cacheLeft || 0);
+      Rect.setCoords();
+    });
+
+  </script>
+</body>
+
+</html>
